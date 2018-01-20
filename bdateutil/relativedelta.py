@@ -225,7 +225,11 @@ class relativedelta(rd):
                               hour=self.hour,
                               minute=self.minute,
                               second=self.second,
-                              microsecond=self.microsecond)
+                              microsecond=self.microsecond,
+                              holidays=self.holidays,
+                              workdays=self.workdays,
+                              btstart=self.btstart,
+                              btend=self.btend)
 
     def __bool__(self):
         if self.bdays is None:
@@ -256,7 +260,11 @@ class relativedelta(rd):
                               hour=self.hour,
                               minute=self.minute,
                               second=self.second,
-                              microsecond=self.microsecond)
+                              microsecond=self.microsecond,
+                              holidays=self.holidays,
+                              workdays=self.workdays,
+                              btstart=self.btstart,
+                              btend=self.btend)
 
     def __eq__(self, other):
         for attr in ('bdays', 'bhours', 'bminutes', 'bseconds'):
